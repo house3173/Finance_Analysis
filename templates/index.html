@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+    <title>Trang thông tin tài chính Nhóm 1</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Trang thông tin tài chính Nhóm 1</h1>
+    
+    <div class="controls">
+        <div>
+            <label for="industrySelect">Chọn ngành nghề:</label>
+            <select id="industrySelect">
+                <option value="">Lựa chọn</option>
+                {% for industry in industries %}
+                <option value="{{ industry }}">{{ industry }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="selection">
+            <label for="metricSelect">Chọn thông số:</label>
+            <select id="metricSelect">
+                <option value="">Lựa chọn</option>
+                {% for metric in metrics %}
+                <option value="{{ metric }}">{{ metric }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+
+    <div class="full-info">
+        <div id="companyList">
+            <h2 style="text-align: center;">Danh sách doanh nghiệp</h2>
+            <table id="companyTable" style="margin: 0 auto;">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã CP</th>
+                        <th>Tên doanh nghiệp</th> <!-- Thêm cột Tên doanh nghiệp -->
+                        <th>Sàn</th>
+                    </tr>
+                </thead>
+                <tbody id="companyTbody"></tbody>
+            </table>
+        </div>    
+
+        <div style="display: block;">
+            <div id="chartContainer">
+                <h2 style="text-align: center;">Biểu đồ thông số</h2>
+                <canvas id="chart"></canvas>
+            </div>
+
+            <div id="companyChartContainer" class="company-chart controls" style="display: block; min-width: 100%;">
+                <label for="metricSelectCompany">Chọn thông số cho biểu đồ công ty:</label>
+                <select id="metricSelectCompany" style="margin-top: 10px;">
+                    <option value="">Lựa chọn</option>
+                    {% for metrics_company in metrics_company %}
+                    <option value="{{ metrics_company }}">{{ metrics_company }}</option>
+                    {% endfor %}
+                </select>
+                <canvas class="mt-20" id="companyChart"></canvas>
+                <div class="mt-20"><b id="companyChartTitle"></b> <i id="companyChartYLabel"></i></div>
+            </div>
+
+            <button id="overviewAnalysisBtn" class="mt-20">Phân tích tổng quan doanh nghiệp</button>
+        </div>
+
+    </div>
+
+    <!-- Modal phân tích tổng quan doanh nghiệp -->
+    <div id="overviewModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2 id="modalTitle">Phân tích tổng quan doanh nghiệp</h2>
+            <div class="chart-container">
+                <!-- Biểu đồ cơ cấu Tài sản ngắn hạn -->
+                <div class="chart-section">
+                    <canvas id="shortTermAssetChart"></canvas>
+                    <p class="chart-description" id="shortTermAssetDesc"></p>
+                </div>
+
+                <!-- Biểu đồ cơ cấu Tài sản dài hạn -->
+                <div class="chart-section">
+                    <canvas id="longTermAssetChart"></canvas>
+                    <p class="chart-description" id="longTermAssetDesc"></p>
+                </div>
+
+                <!-- Biểu đồ cơ cấu Tổng Tài sản -->
+                <div class="chart-section">
+                    <canvas id="totalAssetChart"></canvas>
+                    <p class="chart-description" id="totalAssetDesc"></p>
+                </div>
+
+                <!-- Biểu đồ cơ cấu Nợ phải trả -->
+                <div class="chart-section">
+                    <canvas id="debtChart"></canvas>
+                    <p class="chart-description" id="debtDesc"></p>
+                </div>
+
+                <!-- Biểu đồ cơ cấu Vốn chủ sở hữu -->
+                <div class="chart-section">
+                    <canvas id="equityChart"></canvas>
+                    <p class="chart-description" id="equityDesc"></p>
+                </div>  
+
+                <!-- Biểu đồ cơ cấu Nguồn vốn -->
+                <div class="chart-section">
+                    <canvas id="capitalChart"></canvas>
+                    <p class="chart-description" id="capitalDesc"></p>
+                </div>  
+                
+            </div>
+
+            <div id="chartContainerInModal">
+                <div class="selection">
+                    <label for="metricSelectModal"><b>Chọn thông số:</b></label>
+                    <select id="metricSelectModal">
+                        <option value="Biên LN thuần từ HDKD">Biên LN thuần từ HDKD</option>
+                        {% for metric in metrics %}
+                        <option value="{{ metric }}">{{ metric }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div style="width: 100%;">
+                    <canvas id="chartInModal" style="width: 100%;"></canvas>
+                </div>
+            </div>
+
+            <div class="mt-20 analysis-content">
+                <h2 id="modalTitle">Một số phân tích doanh nghiệp</h2>
+                <div id="analysisContent">
+                    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar">
+                          <span class="progress-text">Loading...</span>
+                        </div>
+                    </div>                                           
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

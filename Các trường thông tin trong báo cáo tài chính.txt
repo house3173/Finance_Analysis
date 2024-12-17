@@ -1,0 +1,153 @@
+---------- Các trường thông tin trong bảng Cân đối kế toán ----------
+TÀI SẢN
+	A- TÀI SẢN NGẮN HẠN
+		I. Tiền và các khoản tương đương tiền
+		II. Các khoản đầu tư tài chính ngắn hạn
+		III. Các khoản phải thu ngắn hạn
+		IV. Hàng tồn kho
+		V. Tài sản ngắn hạn khác
+	B - TÀI SẢN DÀI HẠN
+		I. Các khoản phải thu dài hạn
+		II. Tài sản cố định
+		III. Bất động sản đầu tư
+		IV. Tài sản dở dang dài hạn
+		V. Đầu từ tài chính dài hạn
+		VI. Tài sản dài hạn khác
+NGUỒN VỐN
+	C. NỢ PHẢI TRẢ
+		I. Nợ ngắn hạn
+		II. Nợ dài hạn
+	D. Vốn chủ sở hữu
+		I. Vốn chủ sở hữu
+		II. Nguồn kinh phí và quỹ khác
+
+
+---------- Các trường thông tin trong Kết quả hoạt động kinh doanh ----------
+1. Doanh thu bán hàng và cung cấp dịch vụ
+2. Các khoản giảm trừ doanh thu
+3. Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01-02)
+4. Giá vốn hàng bán
+5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ(20-10-11)
+6. Doanh thu hoạt động tài chính
+7. Chi phí tài chính
+	- Trong đó: Chi phí lãi vay
+8. Phần lãi lỗ trong công ty liên doanh, liên kết
+9. Chi phí bán hàng
+10. Chi phí quản lý doanh nghiệp
+11. Lợi nhuận thuần từ hoạt động kinh doanh{30=20+(21-22)+24-(25+26)}
+12. Thu nhập khác
+13. Chi phí khác
+14. Lợi nhuận khác(40=31-32)
+15. Tổng lợi nhuận kế toán trước thuế(50=30+40)
+16. Chi phí thuế TNDN hiện hành
+17. Chi phí thuế TNDN hoãn lại
+18. Lợi nhuận sau thuế thu nhập doanh nghiệp (60=50-51-52)
+19. Lợi nhuận sau thuế công ty mẹ
+20. Lợi nhuận sau thuế công ty mẹ không kiểm soát
+21. Lãi cơ bản trên cổ phiếu(*)
+22. Lãi suy giảm trên cổ phiếu (*)
+
+---------- Các trường thông tin trong bảng Lưu chuyển tiền tệ ----------
+I. Lưu chuyển tiền từ hoạt động kinh doanh
+	1. Lợi nhuận trước thuế
+	2. Điều chỉnh cho các khoản
+	3. Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động
+II. Lưu chuyển tiền từ hoạt động đầu tư
+	1. Tiền chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác
+	2. Tiền thu từ thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác
+	3. Tiền chi cho vay, mua các công cụ nợ của đơn vị khác
+	4. Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác
+	5. Tiền chi đầu tư góp vốn vào đơn vị khác
+	6. Tiền thu hồi đầu tư góp vốn vào đơn vị khác
+	7. Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia
+III. Lưu chuyển tiền từ hoạt động tài chính
+	1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu
+	2. Tiền trả lại vón góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành
+	3. Tiền thu từ đi vay
+	4. Tiền chi trả nợ gốc vay
+	5. Tiền chi trả nợ gốc thuê tài chính
+	6. Cổ tức, lợi nhuận đã trả cho chủ sở hữu
+	7. Tiền thu từ vốn góp của cổ đông không kiểm soát
+
+---------- Một số công thức tính các trường khác ----------
+1. Vốn lưu động = Tài sản ngắn hạn – Nợ phải trả ngắn hạn
+2. Lợi nhuận trước lãi vay và thuế 
+	EBIT = Lợi nhuận trước thuế + chi phí lãi vay
+     hoặc
+	EBIT= Thu nhập sau thuế + Thuế thu nhập doanh nghiệp + Chi phí lãi vay
+3. Lợi nhuận giữ lại = Lợi nhuận giữ lại đầu kỳ + Lợi nhuận ròng - Cổ tức đã trả
+4. Hệ số vòng quay tài sản hàng tồn kho = Doanh thu trong một kỳ nhất định / Bình quân giá trị hàng tồn kho trong cùng kỳ
+5. Vòng quay tài sản = Doanh thu thuần / Tổng tài sản
+6. Khoản phải thu (tài sản phải thu) = Khoản phải thu ngắn hạn + Khoản phải thu dài hạn
+7. ROS = Lợi nhuận sau thuế / Doanh thu thuần
+8. ROA = Lợi nhuận sau thuế / Tổng tài sản
+9. ROE = Lợi nhuận sau thuế / Vốn chủ sở hữu.
+
+------------ Phân tích báo cáo tài chính -------------------
+A. Phân tích theo chiều ngang ---> Tức là phân tích qua các năm, xem tình hình và sự biến động như thế nào
+
+B. Phân tích theo chiều dọc   ---> Tức là phân tích cấu phần của các thành phần nhỏ trong thành phần to. Ví dụ như trong tổng tài sản, thì xem tài sản ngắn hạn chiếm bao nhiêu phần trăm, tài sản dài hạn chiếm bao nhiêu phần trăm
+
+C. Phân tích dựa trên các chỉ số
+		TÀI SẢN = TÀI SẢN NGẮN HẠN + TÀI SẢN DÀI HẠN = NỢ PHẢI TRẢ + VỐN CHỦ SỞ HỮU = NGUỒN VỐN
+
+1. Nhóm chỉ số thanh khoản ngắn hạn
+----> Khả năng trả nợ trong ngắn hạn mà không cần phát hành thêm cổ phiếu
+----> Các giá trị lấy hoàn toàn từ Bảng cân đối kế toán
+
++ Current Ratio = Tài sản ngắn hạn / Nợ ngắn hạn					---> Nhỏ hơn 1 thì có thể đang có nguy cơ phá sản
+
++ Quick Ratio = (Tài sản ngắn hạn - Hàng tồn kho) / Nợ ngắn hạn 			---> Nguyên nhân là vì hàng tồn kho là tài sản khó thanh khoản nhất
+
++ Cash Ratio (Working capital ratio) = Tiền và tương đương tiền / Nợ ngắn hạn 		---> Nguyên nhân là vì khi trả nợ thì tiền là tài sản trực tiếp không cần quy đổi để trả nợ
+
+2. Nhóm chỉ số về khả năng trả nợ trong dài hạn
+----> Khả năng trả nợ trong dài hạn 
+----> Các giá trị lấy hoàn toàn từ Bảng cân đối kế toán
+
++ Debt-to-Assets Ratio (D/A) = Nợ phải trả / Tổng tài sản		----> càng thấp càng tốt, nếu cao cho thấy sẽ gặp khó khăn trong dài hạn
+
++ Equity Ratio (E/A) = Vốn chủ sở hữu / Tổng tài sản			----> càng cao càng tốt, cho thấy doanh nghiệp có thể tự chủ tài chính, không phụ thuộc vào vốn vay ngân hàng để tăng gia sản xuất
+
++ Debt-to-Equity Ratio (D/E) = Nợ phải trả / Vốn chủ sở hữu 		----> càng thấp càng tốt, nếu cao cho thấy sẽ gặp khó khăn trong dài hạn
+
+3. Nhóm chỉ số lợi nhuận
++ Profit margin đo lường khả năng tạo ra lợi nhuận của doanh nghiệp
+	- Gross profit margin (tỷ suất lợi nhuận gộp) = gross profit / revenue (Lợi nhuận gộp về bán hàng và cung cấp dịch vụ / Doanh thu thuần)
+
+	- Operating profit margin (tỷ suất lợi nhuận hoạt động) = operating profit / revenue (Lợi nhuận thuần từ hoạt động kinh doanh / Doanh thu thuần)
+
+	- Net profit margin (tỷ suất lợi nhuận ròng) = net profit / revenue (Lợi nhuận sau thuế thu nhập doanh nghiệp / Doanh thu thuần)
+
++ ROA (Return on Assets - tỷ suất sinh lời trên tài sản) = Lợi nhuận dòng / Tổng tài sản		----> cho biết hiệu suất doanh nghiệp sử dụng tài sản để tạo ra lợi nhuận ----> so sánh với quá khứ, các năm trước và các doanh nghiệp cùng ngành để đưa ra kết luận 
+
++ ROE (Return on Equity - tỷ suất sinh lời trên vốn chủ sở hữu) = Lợi nhuận dòng / Vốn chủ sở hữu	----> cho biết mức độ sinh lời mà doanh nghiệp đang tạo ra cho các nhà đầu tư ----> so sánh với quá khứ, các năm trước và các doanh nghiệp cùng ngành để đưa ra kết luận
+
+4. Nhóm chỉ số hiệu quả hoạt động
+----> Hiệu suất của doanh nghiệp trong việc sử dụng nguồn lực để tạo ra lợi nhuận
+
++ ATR (Assets Turnover Ratio) = Doanh thu / Trung bình tài sản, trong đó trung bình tài sản = (tài sản đầu năm + tài sản cuối năm) / 2 	----> càng cao càn tốt, cho thấy tạo ra càng nhiều doanh thu trên 1 đồng tài sản. Tuy nhiên có sự khác nhau giữa các ngành nghề
+
++ ITR (Inventory Turnover Ratio - tỷ suất vòng quay vốn hàng tồn kho) = Giá vốn hàng bán / Trung bình hàng tồn kho 	
+
+5. Nhóm chỉ số khả năng thanh toán lãi vay
+
++ Hệ số khả năng thanh toán lãi vay = EBIT / Lãi vay, trong đó EBIT = Lợi nhuận trước thuế và lãi vay
+
+6. Nhóm chỉ số triển vọng thị trường
+
++ Price-to-Earning Ratio (P/E Ratio) = 		----> Biểu thị giá trị thị trường của một cổ phiếu so với lợi nhuận mà công ty đó tạo ra trên mỗ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+#overviewAnalysisBtn {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.controls label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.controls select, #metricSelectModal {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    outline: none;
+}
+
+.controls select:hover {
+    border-color: #45a049; /* Đổi màu viền khi hover */
+}
+
+.controls select:focus {
+    border-color: #4CAF50; /* Đổi màu viền khi focus */
+    background-color: #e0f7e4; /* Đổi màu nền khi focus */
+}
+
+.controls option {
+    padding: 10px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.full-info {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+#companyList, #chartContainer {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#chartContainerInModal {
+    width: 80%;
+    padding: 20px calc(10%);
+    text-align: center;
+}
+
+#companyTable {
+    width: 80%;
+    margin: 20px auto; /* Căn giữa bảng */
+    border-collapse: collapse; /* Loại bỏ khoảng cách giữa các ô */
+    text-align: center;
+}
+
+#companyTable th, #companyTable td {
+    padding: 10px;
+    border: 1px solid #333; /* Đường viền cho tất cả các ô */
+    min-width: 20%; /* Đặt độ rộng tối thiểu cho mỗi cột */
+}
+
+#companyTable th {
+    background-color: #4CAF50; /* Màu nền cho hàng tiêu đề */
+    color: white;
+    font-weight: bold;
+}
+
+#companyTable tr:nth-child(even) {
+    background-color: #f9f9f9; /* Màu nền cho hàng chẵn */
+}
+
+#companyTable tr:hover {
+    background-color: #e0e0e0; /* Hiệu ứng khi hover vào hàng */
+}
+
+.company-chart {
+    margin-top: 20px;
+    width: 80%;
+}
+
+/* Modal container */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: calc(100% - 60px); /* Toàn màn hình trừ margin */
+    height: calc(100% - 60px); /* Toàn màn hình trừ margin */
+    margin: 30px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #4CAF50;
+}
+
+.modal-content p {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.modal .close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal .close:hover {
+    color: #000;
+}
+
+/* Vùng chứa tất cả biểu đồ */
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+/* Mỗi biểu đồ chiếm 30% chiều rộng */
+.chart-section {
+    flex: 0 0 30%; /* Chiếm 30% chiều rộng */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.chart-section canvas {
+    max-width: 100%; /* Biểu đồ vừa với khung */
+    height: auto;
+}
+
+.chart-description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.analysis-content {
+    width: 80%;
+    padding: 5px calc(10%);
+    font-size: 20px;
+}
+
+.analys_li {
+    line-height: 2;
+    text-align: justify;
+}
+
+/* Phần bao ngoài thanh progress */
+.progress {
+    width: 100%;
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Thanh progress-bar */
+  .progress-bar {
+    width: 100%; /* Độ rộng thanh tiến trình */
+    height: 100%;
+    background-color: #4CAF50; /* Màu xanh giống Bootstrap */
+    background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.3) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.3) 75%,
+      transparent 75%,
+      transparent
+    ); /* Hiệu ứng sọc chéo */
+    background-size: 1rem 1rem; /* Kích thước của sọc */
+    animation: progress-bar-stripes 1s linear infinite; /* Hiệu ứng chuyển động */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Animation tạo chuyển động cho sọc */
+  @keyframes progress-bar-stripes {
+    from {
+      background-position: 1rem 0;
+    }
+    to {
+      background-position: 0 0;
+    }
+  }
+  
+  /* Văn bản nằm giữa thanh tiến trình */
+  .progress-text {
+    color: white; /* Màu chữ */
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.3); /* Thêm chút bóng để chữ rõ hơn */
+    position: absolute;
+  }
+
+  .score {
+    color: #4CAF50;
+    font-size: 30px;
+    margin-left: 15px;
+  }
+  
+  
