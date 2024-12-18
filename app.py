@@ -298,10 +298,18 @@ def calculate_average_ratio(industry_companies, df_all_company, ratio_type):
                 profit_growth = calculate_revenue_growth_and_profit_growth_four_quarters(company)[1]
                 ratios.append(revenue_growth)
                 ratios_profit.append(profit_growth)
+            elif ratio_type == 'revenue_growth':
+                revenue = df_all_company[df_all_company['Mã CP'] == company]['Tăng trưởng DT (tỷ đồng) - 4 Quý'].values[0]
+                ratios.append(revenue)
+            elif ratio_type == 'profit_growth':
+                profit = df_all_company[df_all_company['Mã CP'] == company]['Tăng trưởng lợi nhuận (tỷ đồng) - 4 Quý'].values[0]
+                ratios.append(profit)
         except Exception:
             continue
     if ratio_type == 'revenue_profit':
         return sum(ratios) / len(ratios) if len(ratios) > 0 else 0, sum(ratios_profit) / len(ratios_profit) if len(ratios_profit) > 0 else 0
+    if ratio_type == 'revenue_growth' or ratio_type == 'profit_growth':
+        print('Number of companies:', len(ratios))
     return sum(ratios) / len(ratios) if len(ratios) > 0 else 0
 
 @app.route('/evaluate-company')
@@ -452,8 +460,11 @@ def evaluate_company():
 
         # Bước 3: Đánh giá tốc độ tăng trưởng 
         # 1. Tăng trưởng doanh thu (Revenue Growth)   
-        revenue_growth, profit_growth = calculate_revenue_growth_and_profit_growth_four_quarters(company_code)
-        avg_revenue_growth, avg_profit_growth = calculate_average_ratio(industry_companies, df_all_company, 'revenue_profit')
+        # revenue_growth, profit_growth = calculate_revenue_growth_and_profit_growth_four_quarters(company_code)
+        revenue_growth = df_all_company[df_all_company['Mã CP'] == company_code]['Tăng trưởng DT (tỷ đồng) - 4 Quý'].values[0]
+        profit_growth = df_all_company[df_all_company['Mã CP'] == company_code]['Tăng trưởng lợi nhuận (tỷ đồng) - 4 Quý'].values[0]
+        avg_revenue_growth= calculate_average_ratio(industry_companies, df_all_company, 'revenue_growth')
+        avg_profit_growth= calculate_average_ratio(industry_companies, df_all_company, 'profit_growth')
 
         if revenue_growth > avg_revenue_growth:
             revenue_growth_evaluate = f"Tốc độ tăng trưởng doanh thu của công ty {company_code} là {(revenue_growth):.2f}%, cao hơn so với trung bình ngành ({(avg_revenue_growth):.2f}%) cho thấy công ty đang phát triển mạnh mẽ hơn các doanh nghiệp cùng ngành."
