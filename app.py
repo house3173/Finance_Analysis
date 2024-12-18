@@ -284,8 +284,10 @@ def calculate_average_ratio(industry_companies, df_all_company, ratio_type):
                 ratios.append(gross_margin)
             elif ratio_type == 'asset_turnover':
                 df_kqhdkd = load_excel(f'kqhdkd/Ket_qua_hoat_dong_kinh_doanh_{company}.xlsx')
+                df_cdkt = load_excel(f'bctc/Can_doi_ke_toan_{company}.xlsx')
                 total_revenue = df_kqhdkd[df_kqhdkd['Quý'] == "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02)"]["Quý 1 - 2024"].values[0]
                 total_assets = df_cdkt[df_cdkt['Quý'] == "TỔNG CỘNG TÀI SẢN"]["Quý 1 - 2024"].values[0]
+                print(f"Asset_turnover: {company}: {total_revenue / total_assets}")
                 ratios.append(total_revenue / total_assets)
             elif ratio_type == 'roa':
                 roa = df_all_company[df_all_company['Mã CP'] == company]['ROA'].values[0]
@@ -308,7 +310,7 @@ def calculate_average_ratio(industry_companies, df_all_company, ratio_type):
             continue
     if ratio_type == 'revenue_profit':
         return sum(ratios) / len(ratios) if len(ratios) > 0 else 0, sum(ratios_profit) / len(ratios_profit) if len(ratios_profit) > 0 else 0
-    if ratio_type == 'revenue_growth' or ratio_type == 'profit_growth':
+    if ratio_type == 'asset_turnover':
         print('Number of companies:', len(ratios))
     return sum(ratios) / len(ratios) if len(ratios) > 0 else 0
 
